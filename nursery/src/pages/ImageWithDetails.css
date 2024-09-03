@@ -1,0 +1,26 @@
+/* src/ImageWithDetails.css */
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .image {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+  
+  .details {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  

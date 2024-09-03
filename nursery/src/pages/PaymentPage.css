@@ -1,0 +1,31 @@
+.payment-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .cart-summary {
+    margin-bottom: 20px;
+  }
+  
+  .qr-code-section {
+    margin-top: 20px;
+  }
+  
+  .proceed-payment-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .proceed-payment-btn:hover {
+    background-color: darkgreen;
+  }
+
+  

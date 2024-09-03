@@ -1,0 +1,74 @@
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items horizontally at the center */
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 500px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.cart-item .item-details {
+  height: 80px;
+}
+
+.back-to-home-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4081;
+  font: inherit;
+  font-weight:bolder;;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.back-to-home-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.product-item:hover {
+  transform: translateY(-5px); /* Move the item up by 5 pixels */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 1px;
+}
+
+button:hover {
+  background-color: #e73370;
+}
+
+/* Specific styles for the remove button in cart page */
+.cart-item .remove-button {
+  padding: 5px 10px; /* Reduced padding */
+  font-size: 12px; /* Smaller font size */
+  background-color: #ff4081;
+}
+
+.cart-item .remove-button:hover {
+  background-color: #e73370;
+}
