@@ -1,13 +1,13 @@
 
 .signup-background {
-  background-image: url('C:\Users\ragav\OneDrive\Documents\30hrs\plant\plant\nursery\public\Images\Tree.jpg');
+  background-image: url('..//Images/Tree.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f8f8f8;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   background-position: center;
 }
 
