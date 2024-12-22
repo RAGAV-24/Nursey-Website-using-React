@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch ,Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import PlantsPage from './pages/PlantsPage';
 import SeedsPage from './pages/SeedsPage';
@@ -37,14 +37,14 @@ const App = () => {
         {showAddedMessage && <div className="message success">Added to cart successfully</div>}
         {showRemovedMessage && <div className="message success">Removed from cart successfully</div>}
         <Routes>
-          <Route exact path="/" component={LoginPage} />
-          <Route path="/signup" component={SignupPage} />
-          <Route path="/home" render={() => <HomePage addToCart={addToCart} />} />
-          <Route path="/plants" render={() => <PlantsPage addToCart={addToCart} />} />
-          <Route path="/seeds" render={() => <SeedsPage addToCart={addToCart} />} />
-          <Route path="/pots" render={() => <PotsPage addToCart={addToCart} />} />
-          <Route path="/cart" render={() => <CartPage cart={cart} removeFromCart={removeFromCart} />} />
-          {/* <Route path="/payment" component={PaymentPage} /> Added PaymentPage route */}
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/home" element={<HomePage addToCart={addToCart} />} />
+          <Route path="/plants" element={<PlantsPage addToCart={addToCart} />} />
+          <Route path="/seeds" element={<SeedsPage addToCart={addToCart} />} />
+          <Route path="/pots" element={<PotsPage addToCart={addToCart} />} />
+          <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} />} />
+          {/* <Route path="/payment" element={<PaymentPage />} /> Added PaymentPage route */}
         </Routes>
       </div>
     </Router>
