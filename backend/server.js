@@ -6,11 +6,13 @@ const empmodel = require('./emp');
 const app = express();
 app.use(express.json());
 app.use(cors());
-const mongoURI = 'mongodb://localhost:27017/Nursery';
 
-mongoose.connect(mongoURI, { })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
+const mongoURI = 'mongodb+srv://ragav:rudu007@nursery.m02ux.mongodb.net/Nursery?retryWrites=true&w=majority';
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB Atlas connected'))
+  .catch(err => console.error('MongoDB Atlas connection error:', err));
+
 mongoose.connection.on('error', err => {
   console.error('MongoDB connection error:', err);
   process.exit(1);
@@ -28,7 +30,7 @@ app.post("/login", (req, res) => {
       if (!user) {
         return res.status(401).json({ message: 'Invalid username or password' });
       }
-      
+
       if (user.password === password) {
         console.log(username, password);
         res.status(200).json({ message: 'Login successful' });
