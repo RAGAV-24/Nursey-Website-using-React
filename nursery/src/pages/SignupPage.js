@@ -13,13 +13,13 @@ const SignupPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:2000/users', { username, email, password})
+    axios.post('https://nursery-z2lo.onrender.com/users', { username, email, password})
       .then(result => {
          console.log(result);
          window.location.href = '/home';
          alert('welcome ' + username)
-      
-        
+
+
       })
       .catch(err => console.log(err));
   };

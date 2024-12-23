@@ -10,25 +10,23 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    axios.post('http://localhost:2000/login', { username, password })
+
+    axios.post('https://nursery-z2lo.onrender.com/login', { username, password })
       .then(response => {
         console.log(response);
-        if (response.data) { 
+        if (response.status === 200) {
           alert('Welcome ' + username);
-          window.location.href = '/login';
+          window.location.href = '/home'; // Change to your actual dashboard route
         } else {
-          
           alert('Login failed. Please check your credentials.');
         }
       })
       .catch(error => {
-        console.error(error);
-        
-        alert('An error occurred during login. Please try again later.');
+        console.error('Login error:', error);
+        setError('An error occurred during login. Please try again later.');
       });
+  };
 
-    }
   return (
     <div className="login-background">
       <div className="login-box">
@@ -56,7 +54,7 @@ const LoginPage = () => {
               required
             />
           </div>
-          
+
             <button type="submit" onClick={handleSubmit}>Login</button>
         </form>
         <p>Don't have an account? <Link to='/signup'>Create Account</Link></p>
